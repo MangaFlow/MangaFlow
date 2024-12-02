@@ -12,7 +12,7 @@
 
 A free and open source manga reader
 
-[![CI](https://github.com/null2264/yokai/actions/workflows/build_push.yml/badge.svg)](https://github.com/null2264/yokai/actions/workflows/build_push.yml)
+[![CI](https://github.com/mangaflow/mangaflow/actions/workflows/build_push.yml/badge.svg)](https://github.com/null2264/yokai/actions/workflows/build_push.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](/LICENSE)
 [![Discord: Mihon](https://img.shields.io/discord/1195734228319617024.svg?label=&labelColor=6A7EC2&color=7389D8&logo=discord&logoColor=FFFFFF)](https://discord.gg/mihon)
 [![Mirror: GitLab](https://img.shields.io/badge/mirror-GitLab-orange.svg)](https://gitlab.com/null2264/yokai)
@@ -21,7 +21,7 @@ A free and open source manga reader
 
 ## Download
 
-[![Yokai Stable](https://img.shields.io/github/v/release/null2264/yokai?maxAge=3600&label=Stable&labelColor=06599d&color=043b69&filter=v*)](https://github.com/null2264/yokai/releases)
+[![Yokai Stable](https://img.shields.io/github/downloads/mangaflow/mangaflow/latest/*)](https://github.com/mangaflow/mangaflow/releases)
 [![Yokai Nightly](https://img.shields.io/github/v/release/null2264/yokai-nightly?maxAge=3600&label=Nightly&labelColor=2c2c47&color=1c1c39&filter=r*)](https://github.com/null2264/yokai-nightly/releases)
 
 *Requires Android 6.0 or higher.*
