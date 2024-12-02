@@ -21,8 +21,8 @@ A free and open source manga reader
 
 ## Download
 
-[![Yokai Stable](https://img.shields.io/github/downloads/mangaflow/mangaflow/latest/*)](https://github.com/mangaflow/mangaflow/releases)
-[![Yokai Nightly](https://img.shields.io/github/v/release/null2264/yokai-nightly?maxAge=3600&label=Nightly&labelColor=2c2c47&color=1c1c39&filter=r*)](https://github.com/null2264/yokai-nightly/releases)
+[![MangaFlow Stable](https://img.shields.io/github/downloads/mangaflow/mangaflow/latest/total?label=Stable)](https://github.com/mangaflow/mangaflow/releases)
+[![MangaFlow Nightly](https://img.shields.io/github/downloads/mangaflow/mangaflow-nightly/latest/total?label=Nightly&labelColor=2c2c47&color=1c1c39*)](https://github.com/MangaFlow/MangaFlow-Nightly/releases)
 
 *Requires Android 6.0 or higher.*
 
