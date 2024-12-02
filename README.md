@@ -1,4 +1,4 @@
-# WIP
+# WIP Page, things may look weird!
 <div align="center">
 
 <a href="https://github.com/MangaFlow/MangaFlow">
@@ -16,7 +16,6 @@ A free and open source manga reader
 [![CI](https://github.com/mangaflow/mangaflow/actions/workflows/build_push.yml/badge.svg)](https://github.com/null2264/yokai/actions/workflows/build_push.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](/LICENSE)
 [![Discord: Mihon](https://img.shields.io/discord/1195734228319617024.svg?label=&labelColor=6A7EC2&color=7389D8&logo=discord&logoColor=FFFFFF)](https://discord.gg/mihon)
-[![Mirror: GitLab](https://img.shields.io/badge/mirror-GitLab-orange.svg)](https://gitlab.com/null2264/yokai)
 
 <img src="./.github/readme-images/screens.gif" alt="Yokai screenshots" />
 
@@ -29,17 +28,24 @@ A free and open source manga reader
 
 ## About Fork
 
-This fork was created for personal usage, the name Yōkai is chosen in theme of my "paranormal" fork collection, all of them are made for personal purposes, to explore the language used to made them, explore new tech, or simply want to add my own twists that may not accepted by upstream as a PR.
+This fork was created for personal usage, i thought "yo why not add e-naked wrestling" or some absurd thing like that ._.
 
-Updates are sporadic, sometime fast, sometime slow.
-
-As of the time of writing, this fork is currently focusing on migrating to a much more modern infrastructure, some features may be added, but most changes are happening behind the scene.
+Updates are random because i work on this when i have time.
 
 ## Features
 
 <div align="left">
 
 <details open="">
+    <summary><h3>From MangaFlow</h3></summary>
+
+* New themes
+
+More soon!
+
+</details>
+
+<details>
     <summary><h3>From Yōkai</h3></summary>
 
 * NSFW/SFW library filter (taken from [TachiyomiSY](https://github.com/jobobby04/TachiyomiSY)).
@@ -49,7 +55,7 @@ As of the time of writing, this fork is currently focusing on migrating to a muc
 
 </details>
 
-<details open="">
+<details>
     <summary><h3>From upstream (Tachiyomi/Mihon)</h3></summary>
 
 * Local reading of downloaded content.
