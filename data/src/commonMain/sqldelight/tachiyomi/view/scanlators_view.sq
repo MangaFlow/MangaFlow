@@ -10,5 +10,5 @@ SELECT S.* FROM (
             substr(str, instr(str, ' [.] ')+5)
         FROM split WHERE str != ''
     )
-    SELECT _id AS manga_id, name FROM split WHERE split.seq != 0 ORDER BY split.seq ASC
+    SELECT _id AS manga_id, name FROM split WHERE name != '' ORDER BY split.seq ASC
 ) AS S;

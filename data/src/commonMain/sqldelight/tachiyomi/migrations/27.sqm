@@ -1,3 +1,19 @@
+DROP VIEW IF EXISTS scanlators_view;
+CREATE VIEW scanlators_view AS
+SELECT S.* FROM (
+    WITH RECURSIVE split(seq, _id, name, str) AS (
+        SELECT 0, mangas._id, NULL, mangas.filtered_scanlators||' [.] ' FROM mangas WHERE mangas._id
+        UNION ALL SELECT
+            seq+1,
+            _id,
+            substr(str, 0, instr(str, ' [.] ')),
+            substr(str, instr(str, ' [.] ')+5)
+        FROM split WHERE str != ''
+    )
+    SELECT _id AS manga_id, name FROM split WHERE name != '' ORDER BY split.seq ASC
+) AS S;
+
+DROP VIEW IF EXISTS library_view;
 CREATE VIEW library_view AS
 SELECT
     M.*,
@@ -32,7 +48,3 @@ LEFT JOIN (SELECT * FROM mangas_categories) AS MC
 ON MC.manga_id = M._id
 WHERE M.favorite = 1
 ORDER BY M.title;
-
-findAll:
-SELECT *
-FROM library_view;

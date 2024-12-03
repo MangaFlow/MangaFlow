@@ -80,8 +80,8 @@ abstract class LibraryHolder(
 
     override fun onLongClick(view: View?): Boolean {
         return if (adapter.isLongPressDragEnabled) {
-            val manga = (adapter.getItem(flexibleAdapterPosition) as LibraryItem).manga
-            if (!isDraggable && !manga.isBlank() && !manga.isHidden()) {
+            val manga = (adapter.getItem(flexibleAdapterPosition) as? LibraryItem)?.manga
+            if (manga != null && !isDraggable && !manga.isBlank() && !manga.isHidden()) {
                 adapter.mItemLongClickListener.onItemLongClick(flexibleAdapterPosition)
                 toggleActivation()
                 true

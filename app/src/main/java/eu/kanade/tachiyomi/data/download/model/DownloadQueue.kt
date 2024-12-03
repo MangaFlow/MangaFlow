@@ -20,7 +20,7 @@ class DownloadQueue(
 
     private val updatedRelay = PublishRelay.create<Unit>()
 
-    private val downloadListeners = mutableListOf<DownloadListener>()
+    private val downloadListeners: MutableList<DownloadListener> = CopyOnWriteArrayList<DownloadListener>()
 
     private var scope = MainScope()
 
@@ -43,7 +43,7 @@ class DownloadQueue(
         if (download.status == Download.State.DOWNLOADING || download.status == Download.State.QUEUE) {
             download.status = Download.State.NOT_DOWNLOADED
         }
-        downloadListeners.forEach { it.updateDownload(download) }
+        callListeners(download)
         if (removed) {
             updatedRelay.call(Unit)
         }
@@ -73,7 +73,7 @@ class DownloadQueue(
             if (download.status == Download.State.DOWNLOADING || download.status == Download.State.QUEUE) {
                 download.status = Download.State.NOT_DOWNLOADED
             }
-            downloadListeners.forEach { it.updateDownload(download) }
+            callListeners(download)
         }
         queue.clear()
         store.clear()
@@ -102,7 +102,10 @@ class DownloadQueue(
     }
 
     private fun callListeners(download: Download) {
-        downloadListeners.forEach { it.updateDownload(download) }
+        val iterator = downloadListeners.iterator()
+        while (iterator.hasNext()) {
+            iterator.next().updateDownload(download)
+        }
     }
 
 //    private fun setPagesSubject(pages: List<Page>?, subject: PublishSubject<Int>?) {

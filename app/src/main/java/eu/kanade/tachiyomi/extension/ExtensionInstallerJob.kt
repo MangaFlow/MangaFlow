@@ -183,6 +183,9 @@ class ExtensionInstallerJob(val context: Context, workerParams: WorkerParameters
                     .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
                     .build()
             }
+
+            if (requests.isEmpty()) return
+
             var workContinuation = WorkManager.getInstance(context)
                 .beginUniqueWork(TAG, ExistingWorkPolicy.REPLACE, requests.first())
             for (i in 1 until requests.size) {

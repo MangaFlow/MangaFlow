@@ -38,6 +38,8 @@ The format is simplified version of [Keep a Changelog](https://keepachangelog.co
 - Fix issues with shizuku in a multi-user setup (@Redjard)
 - Fix some regional/variant languages is not listed in app language option
 - Fix browser not opening in some cases in Honor devices (@MajorTanya)
+- Fix "ConcurrentModificationException" crashes
+- Fix Komga unread badge, again
 
 ### Other
 - Simplify network helper code
@@ -45,6 +47,7 @@ The format is simplified version of [Keep a Changelog](https://keepachangelog.co
 - Update dependency com.android.tools:desugar_jdk_libs to v2.1.3
 - Update moko to v0.24.2
 - Refactor trackers to use DTOs (@MajorTanya)
+  - Fix AniList `ALSearchItem.status` nullibility (@Secozzi)
 - Replace Injekt with Koin
 - Remove unnecessary permission added by Firebase
 - Remove unnecessary features added by Firebase
@@ -77,7 +80,7 @@ The format is simplified version of [Keep a Changelog](https://keepachangelog.co
 - Update dependency co.touchlab:kermit to v2.0.5
 - Replace WebView to use Compose (@arkon)
   - Fixed Keyboard is covering web page inputs
-- Increased `tryToSetForeground` delay to fix potential crashes
+- Increased `tryToSetForeground` delay to fix potential crashes (@nonproto)
 
 ## [1.8.5.13]
 

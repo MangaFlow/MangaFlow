@@ -100,7 +100,9 @@ class CategoryPresenter(
         scope.launch {
             deleteCategories.awaitOne(safeCategory.toLong())
             categories.remove(category)
-            controller.setCategories(categories.map(::CategoryItem))
+            withContext(Dispatchers.Main) {
+                controller.setCategories(categories.map(::CategoryItem))
+            }
         }
     }
 
